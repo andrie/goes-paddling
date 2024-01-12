@@ -1,11 +1,11 @@
 import {makeScene2D} from '@motion-canvas/2d';
-import {Node, Circle, Polygon, Txt, Layout, poly} from '@motion-canvas/2d/lib/components';
+import {Node, Circle, Polygon, Txt, Layout} from '@motion-canvas/2d/lib/components';
 import {waitFor, waitUntil} from '@motion-canvas/core/lib/flow';
 import {createRef, makeRef, range, useRandom} from '@motion-canvas/core/lib/utils';
 import {all, loop, sequence} from '@motion-canvas/core/lib/flow';
 import {linear} from  '@motion-canvas/core/lib/tweening';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
-import {Dipolyion} from '@motion-canvas/core/lib/types';
+// import {Dion} from '@motion-canvas/core/lib/types';
 
 function aLabel(ref:any, str: string, x:number, y: number){
   return(

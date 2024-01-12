@@ -60,7 +60,7 @@ export default makeScene2D(function* (view) {
         <Path ref={rightChevron} position={[50,   0]}   scale={1} stroke='#666' lineWidth={5} data={rect_path} />,
       </Node>
       <Node >
-        <Txt ref={txtPosit} text='' fill='#666' fontFamily='Source Sans' fontSize={150} align='left'/>
+        <Txt ref={txtPosit} text='' fill='#666' fontFamily='Source Sans' fontSize={150} />
       </Node>
       <Node ref={pBoat} position={[0, 200]}>
         <Path ref={leftBoat}  position={[-50, 0]} scale={0.5} fill='#666' rotation={180} lineWidth={5} data={rect_path} />,
@@ -94,8 +94,8 @@ export default makeScene2D(function* (view) {
     ),
     all(       
       // logo changes colour
-      leftChevron().stroke('#e13238', 1),
-      rightChevron().stroke('#33c', 1),
+      leftChevron().stroke('#e13238', 2),
+      rightChevron().stroke('#33c', 2),
     ),
     all(
       // logo changes position
