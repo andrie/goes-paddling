@@ -1,0 +1,44 @@
+---
+title: "Posit goes paddling"
+format: 
+  revealjs:
+    resources:
+    - dist/*/*
+    - src/*.js
+    theme: night
+    preview:
+        port: 4200
+        browser: false
+---
+
+# Intro
+
+
+```{=html}
+<style>
+    motion-canvas-player {
+        width:  75%;
+        /* height: 25vh; */
+        display: block inline;
+        /* auto-play: true; */
+    }
+</style>
+```
+```{=html}
+<script type="module" crossorigin src="/dist/motion-canvas-ts.js"></script>
+```
+```{=html}
+<script type="module" crossorigin src="/src/motion-canvas-url.js"></script>
+```
+
+## Lisa Carrington
+
+<motion-canvas-player src="./animations/project2.js"></motion-canvas-player>
+
+is an amazing paddler
+
+## Racing kayaking
+
+is an olympic sport
+
+<motion-canvas-player src="./animations/project.js" style="width:50%"></motion-canvas-player>
