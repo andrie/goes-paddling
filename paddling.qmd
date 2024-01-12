@@ -15,30 +15,29 @@ format:
 
 
 ```{=html}
-<style>
-    motion-canvas-player {
-        width:  75%;
-        /* height: 25vh; */
-        display: block inline;
-        /* auto-play: true; */
-    }
-</style>
-```
-```{=html}
 <script type="module" crossorigin src="/dist/motion-canvas-ts.js"></script>
-```
-```{=html}
-<script type="module" crossorigin src="/src/motion-canvas-url.js"></script>
 ```
 
 ## Lisa Carrington
 
+Olympic champion
+
 <motion-canvas-player src="./animations/project2.js"></motion-canvas-player>
 
-is an amazing paddler
+Unbeaten since 2012
 
 ## Racing kayaking
 
 is an olympic sport
 
-<motion-canvas-player src="./animations/project.js" style="width:50%"></motion-canvas-player>
+<motion-canvas-player src="./animations/kayak.js" auto style="width:100vpw"></motion-canvas-player>
+
+## extension
+
+This should include some shortcode text
+
+{{< motion-canvas ./animations/kayak.js >}}
+
+## posit logo
+
+{{< motion-canvas ./animations/posit-logo.js >}}
