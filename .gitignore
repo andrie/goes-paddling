@@ -4,3 +4,4 @@ node_modules/
 /.quarto/
 _site
 *_files/
+_fonts

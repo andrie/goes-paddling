@@ -4,7 +4,6 @@ mc_style = [[
         width:  75%;
         /* height: 25vh; */
         display: block inline;
-        auto: true;
     }
 </style>
 ]]
@@ -14,7 +13,7 @@ return {
 
     quarto.doc.add_html_dependency({
       name = "motion-canvas", 
-      version = "1.0.1",
+      version = "0.1.1",
       scripts = {'motion-canvas-player.js'},
       head = mc_style,
     })
@@ -25,7 +24,8 @@ return {
     local var = pandoc.utils.stringify(raw_args)
     -- return pandoc.Str("Hello " .. var .. " from Motion-canvas!")
     return pandoc.RawInline('html', 
-      '<motion-canvas-player src="' .. src .. '"></motion-canvas-player>'
+      '<motion-canvas-player src="' .. src .. '" auto="true";></motion-canvas-player>'
+      -- '<motion-canvas-player src="' .. src .. '" ></motion-canvas-player>'
     )
   end
 }

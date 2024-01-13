@@ -2,27 +2,27 @@
 title: "Posit goes paddling"
 format: 
   revealjs:
+    css: custom.css
+    mainfont: Open_Sans
     resources:
     - dist/*/*
-    - src/*.js
+    # - src/*.js
+    - _fonts/*/*
     theme: night
-    preview:
-        port: 4200
-        browser: false
+preview:
+  port: 4200
+  browser: false
 ---
 
-# Intro
-
+## Lisa Carrington
 
 ```{=html}
 <script type="module" crossorigin src="/dist/motion-canvas-ts.js"></script>
 ```
 
-## Lisa Carrington
-
 Olympic champion
 
-<motion-canvas-player src="./animations/project2.js"></motion-canvas-player>
+{{< motion-canvas ./animations/project2.js auto >}}
 
 Unbeaten since 2012
 
@@ -30,14 +30,14 @@ Unbeaten since 2012
 
 is an olympic sport
 
-<motion-canvas-player src="./animations/kayak.js" auto style="width:100vpw"></motion-canvas-player>
-
-## extension
-
-This should include some shortcode text
 
 {{< motion-canvas ./animations/kayak.js >}}
+
 
 ## posit logo
 
 {{< motion-canvas ./animations/posit-logo.js >}}
+
+## hexagons
+
+{{< motion-canvas ./animations/hexagons.js >}}
