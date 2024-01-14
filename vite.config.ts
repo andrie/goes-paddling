@@ -21,18 +21,18 @@ export default defineConfig({
         // dir: "../public/animations",
         entryFileNames: "[name].js",
         // chunkFileNames: "[name].js",
-        // assetFileNames: "[name].[ext]"
+        assetFileNames: "[name].[ext]"
       },
       plugins: [
-        // copy({
-        //   targets: [
-        //     { 
-        //       src: 'dist', 
-        //       dest: '_site' 
-        //     }
-        //   ],
-        //   hook: 'writeBundle' // run the plugin after the bundle is written
-        // })
+        copy({
+          targets: [
+            { 
+              src: 'public/animations/*', 
+              dest: 'dist/animations/' 
+            }
+          ],
+          // hook: 'writeBundle' // run the plugin after the bundle is written
+        })
       ]
     },
   },

@@ -60,7 +60,7 @@ export default makeScene2D(function* (view) {
         <Path ref={rightChevron} position={[50,   0]}   scale={1} stroke='#666' lineWidth={5} data={rect_path} />,
       </Node>
       <Node >
-        <Txt ref={txtPosit} text='' fill='#666' fontFamily='Source Sans' fontSize={150} />
+        <Txt ref={txtPosit} text='' fill='#666' fontFamily='Open Sans' fontSize={150} />
       </Node>
       <Node ref={pBoat} position={[0, 200]}>
         <Path ref={leftBoat}  position={[-50, 0]} scale={0.5} fill='#666' rotation={180} lineWidth={5} data={rect_path} />,

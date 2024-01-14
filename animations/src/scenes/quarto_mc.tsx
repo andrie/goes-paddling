@@ -8,12 +8,13 @@ export default makeScene2D(function* (view) {
   const container = createRef<Rect>();
 
   const RECT_WIDTH = 400;
-  const RECT_HEIGHT = 140;
+  const RECT_HEIGHT = 150;
   const RECT_FILL = "lightgrey";
   const TEXT_COLOR = "blue";
 
   view.add(
     <>
+      <Txt fontFamily={"Open Sans"}></Txt>
       <Rect ref={container} x={-100} y={50} opacity={0} size={[500, 400]}
       lineWidth={0} stroke="#f00">
 

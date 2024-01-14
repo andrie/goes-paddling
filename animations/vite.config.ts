@@ -11,6 +11,7 @@ export default defineConfig({
         "./src/hexagons.ts",
         "./src/posit-logo.ts",
         "./src/kayak.ts",
+        "./src/quarto_mc.ts",
       ],
     }),
   ],
@@ -21,12 +22,19 @@ export default defineConfig({
         // dir: "../dist",
         entryFileNames: "[name].js",
         chunkFileNames: "[name].js",
-        // assetFileNames: "[name].[ext]"
+        assetFileNames: "[name].[ext]"
       },  
       plugins: [
         copy({
           targets: [
-            { src: '../public/animations/*', dest: '../dist/animations/' }
+            { 
+              src: '../public/animations/*', 
+              dest: '../dist/animations/' 
+            },
+            { 
+              src: './_fonts/*', 
+              dest: './dist/_fonts/' 
+            }
           ],
           hook: 'writeBundle' // run the plugin after the bundle is written
         })
