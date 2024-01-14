@@ -22,7 +22,7 @@ preview:
 
 Olympic champion
 
-{{< motion-canvas ./animations/project2.js auto >}}
+{{< motion-canvas ./animations/project2.js auto loop=false >}}
 
 Unbeaten since 2012
 
@@ -36,8 +36,12 @@ is an olympic sport
 
 ## posit logo
 
-{{< motion-canvas ./animations/posit-logo.js >}}
+{{< motion-canvas ./animations/posit-logo.js loop=false >}}
 
 ## hexagons
 
-{{< motion-canvas ./animations/hexagons.js >}}
+{{< motion-canvas ./animations/hexagons.js loop=false >}}
+
+## motion canvas
+
+{{< motion-canvas ./animations/project.js loop >}}

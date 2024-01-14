@@ -4,21 +4,18 @@ function prependBase() {
 
   // Select all 'motion-canvas-player' elements in the current slide
   if (currentSlide) {
-    const players = currentSlide.querySelectorAll('motion-canvas-player');
 
-    players.forEach(player => {
-      let url = player.getAttribute('src') || 'undefined';
-      console.log('Editing player with url ', url);
-      // Create a new player
-      const newElement = document.createElement('motion-canvas-player');
-      // Set the same attributes
-      newElement.setAttribute('auto', player.getAttribute('auto') ?? 'true');
-      newElement.setAttribute('src', url);
-      newElement.setAttribute('style', player.getAttribute('style') ?? '');
-      // Replace the old player
-      player.replaceWith(newElement);
-    });
-  }
+    // this code assumes one animation per slide
+    // TODO: make it work with multiple animations per slide
+    const player = currentSlide.querySelector('motion-canvas-player')
+
+    if (player.getAttribute('loop') === 'false' ) {
+      setTimeout(() => {
+        console.log("Trying to toggle loop")
+          player.player.toggleLoop();
+        }, 1000); // Adjust the delay as needed
+      }
+    }
 }
 
 // Check every 100ms if Reveal is defined
@@ -28,4 +25,4 @@ var checkReveal = setInterval(function() {
     Reveal.addEventListener('slidechanged', prependBase);
     clearInterval(checkReveal);
   }
-}, 500);
+}, 1000);

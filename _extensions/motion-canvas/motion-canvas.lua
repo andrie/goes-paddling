@@ -18,14 +18,31 @@ return {
       head = mc_style,
     })
 
-    local src = pandoc.utils.stringify(args[1])
-    -- quarto.log.output(src)
-    -- local src = args[1]
-    local var = pandoc.utils.stringify(raw_args)
-    -- return pandoc.Str("Hello " .. var .. " from Motion-canvas!")
-    return pandoc.RawInline('html', 
-      '<motion-canvas-player src="' .. src .. '" auto="true";></motion-canvas-player>'
-      -- '<motion-canvas-player src="' .. src .. '" ></motion-canvas-player>'
-    )
+    local stringify = pandoc.utils.stringify
+
+    local src = stringify(args[1])
+
+    -- function to parse kwargs
+    -- takes input of key and returns string 'key="value"'
+    local parse_kwarg = function(key, default)
+      local value = stringify(kwargs[key])
+      -- remove leading and trailing quotes from value
+      value = string.gsub(value, "^\"(.*)\"$", "%1")
+      if value == "" then
+        value = default
+      end
+      return key .. '="' .. value .. '" '
+    end
+
+    local cmdArgs = ""
+    cmdArgs = cmdArgs .. 
+      parse_kwarg("auto", "true") ..
+      parse_kwarg("loop", "true")
+
+
+    local out = 
+    '<motion-canvas-player src="' .. src .. '" ' .. cmdArgs ..'></motion-canvas-player>'
+
+    return pandoc.RawInline('html', out)
   end
 }
