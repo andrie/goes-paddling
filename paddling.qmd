@@ -6,7 +6,6 @@ format:
     mainfont: Open_Sans
     resources:
     - dist/*/*
-    # - src/*.js
     - _fonts/*/*
     theme: night
 preview:
@@ -44,4 +43,4 @@ is an olympic sport
 
 ## motion canvas
 
-{{< motion-canvas ./animations/project.js loop >}}
+{{< motion-canvas ./animations/quarto_mc.js loop >}}

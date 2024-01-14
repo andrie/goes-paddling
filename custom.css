@@ -3,5 +3,5 @@
   /* src: url("_fonts/Open_Sans/static/OpenSans-Regular.ttf"); */
   src: 
     local(),  
-    url("_fonts/Open_Sans/static/OpenSans-Light.ttf") format(truetype);
+    url("./_fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format(truetype);
 }
