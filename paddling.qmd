@@ -16,7 +16,7 @@ preview:
 ## Lisa Carrington
 
 ```{=html}
-<script type="module" crossorigin src="/dist/motion-canvas-ts.js"></script>
+<script type="module" crossorigin src="./dist/motion-canvas-ts.js"></script>
 ```
 
 Olympic champion

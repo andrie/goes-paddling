@@ -32,8 +32,8 @@ export default defineConfig({
               dest: '../dist/animations/' 
             },
             { 
-              src: './_fonts/*', 
-              dest: './dist/_fonts/' 
+              src:  '../public/animations/_fonts/*', 
+              dest: '../dist/public/_fonts/' 
             }
           ],
           hook: 'writeBundle' // run the plugin after the bundle is written

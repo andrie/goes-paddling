@@ -27,11 +27,15 @@ export default defineConfig({
         copy({
           targets: [
             { 
-              src: 'public/animations/*', 
+              src: 'public/animations/', 
               dest: 'dist/animations/' 
-            }
+            },
+            { 
+              src: 'animations/public/_fonts/', 
+              dest: 'dist/public/_fonts/' 
+            },
           ],
-          // hook: 'writeBundle' // run the plugin after the bundle is written
+          hook: 'writeBundle' // run the plugin after the bundle is written
         })
       ]
     },

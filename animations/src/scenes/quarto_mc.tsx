@@ -1,5 +1,6 @@
-import { makeScene2D, Circle, Rect, Txt, Line, Node } from "@motion-canvas/2d";
+import { makeScene2D, Circle, Rect, RectProps, Txt, Line, Node, TxtProps } from "@motion-canvas/2d";
 import { createRef, all } from "@motion-canvas/core";
+import { waitFor } from "@motion-canvas/core";
 
 export default makeScene2D(function* (view) {
   const myCircle = createRef<Circle>();
@@ -12,21 +13,30 @@ export default makeScene2D(function* (view) {
   const RECT_FILL = "lightgrey";
   const TEXT_COLOR = "blue";
 
+  const TxtRect = (props: RectProps) => (
+    <Rect fill={RECT_FILL} stroke={TEXT_COLOR} lineWidth={3} {...props} >
+      {/* <Txt text={txt} fill={TEXT_COLOR} /> */}
+    </Rect>
+    );
+
   view.add(
     <>
-      <Txt fontFamily={"Open Sans"}></Txt>
+      {/* <Rect fill={RECT_FILL} stroke={TEXT_COLOR}> </Rect> */}
+
       <Rect ref={container} x={-100} y={50} opacity={0} size={[500, 400]}
-      lineWidth={0} stroke="#f00">
+      lineWidth={0} stroke={TEXT_COLOR} >
+  
+        <Txt fontFamily={"Open Sans"}></Txt>
 
-        <Rect ref={quarto} x={-70} y={-50} width={RECT_WIDTH} height={140} 
-          fill={RECT_FILL}stroke={TEXT_COLOR} lineWidth={3}>
-          <Txt text="Quarto" fill={TEXT_COLOR} />
-        </Rect>
+        <TxtRect ref={quarto} x={-70} y={-50} width={RECT_WIDTH} height={140} >
+          {/* fill={RECT_FILL} stroke={TEXT_COLOR} lineWidth={3} */}
+          <Txt fontFamily={"Open Sans"} text="Quarto" fill={TEXT_COLOR} />
+        </TxtRect>
 
-        <Rect ref={mc} x={RECT_WIDTH + 50} y={-50} width={RECT_WIDTH} height={140} 
-          fill={RECT_FILL}stroke={TEXT_COLOR} lineWidth={3}>
-          <Txt text="Motion Canvas" fill={TEXT_COLOR} />
-        </Rect>
+        <TxtRect ref={mc} x={RECT_WIDTH + 50} y={-50} width={RECT_WIDTH} height={140} >
+          {/* fill={RECT_FILL}stroke={TEXT_COLOR} lineWidth={3}> */}
+          <Txt fontFamily={"Open Sans"} text={"Motion Canvas"} fill={TEXT_COLOR} />
+        </TxtRect>
 
         {/* <Line 
           stroke={'#f00'}
@@ -59,11 +69,17 @@ export default makeScene2D(function* (view) {
   );
   
   yield* all(
-    container().lineWidth(10, 2)
+    container().fill(RECT_FILL, 2),
+    container().lineWidth(10, 2),
+    quarto().lineWidth(0, 2),
+    mc().lineWidth(0, 2)
   )
 
+  // wait for 1 second
+  yield* waitFor(1);
+
   yield* all(
-    container().opacity(0, 1)
+    container().opacity(0, 1),
   )
 
 });
