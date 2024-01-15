@@ -1,0 +1,4 @@
+- source: paddling.qmd
+  quarto-pub:
+    - id: caffea59-a57b-4ab1-b225-50f9f1829d79
+      url: 'https://andrie.quarto.pub/goes-paddling'
