@@ -1,11 +1,14 @@
 ---
-title: "Posit goes paddling"
+# title: "Posit goes paddling"
 format: 
   revealjs:
     width: 1920
     height: 1080
     css: custom.css
     mainfont: Open_Sans
+    transition: fade
+    transition-speed: slow
+    background-transition: fade
     resources:
     - dist/*/*
     - _fonts/*/*
@@ -13,24 +16,37 @@ format:
     menu: false
     appearance:
       autoappear: true
-      autoelements: {"img": {"animation":"animate__fadeInDown", "speed":"slow", "delay":"200"}}
+      autoelements: {"img": {"animation":"animate__fadeInDown", "speed":"slow", "delay":"500"}}
       appearevent: slidechanged
+    include-in-header: 
+      - text: <script src="./dist/motion-canvas-ts.js"></script>
+project:
+  preview:
+    port: 4200
+    browser: false
 revealjs-plugins:
   - appearance
-preview:
-  port: 4200
-  browser: false
 ---
+
+
+
+
+## Posit goes paddling
+
+{{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
+
 
 ## Lisa Carrington
 
-```{=html}
-<script type="module" crossorigin src="./dist/motion-canvas-ts.js"></script>
-```
 
-Olympic champion
+Olympic champion, 200m sprint kayak
 
-{{< motion-canvas ./animations/project2.js auto loop=false >}}
+::: {.row}
+![Lisa Carrington](_raw_images/lisa/lisa-3.jpg)
+![Lisa Carrington](_raw_images/lisa/lisa-2.jpg)
+![Lisa Carrington](_raw_images/lisa/lisa-1.jpg)
+:::
+
 
 Unbeaten since 2012
 
@@ -85,7 +101,7 @@ The Duzi river marathon
 :::
 
 
-## Birds
+## Birdlife of the River Thames
 
 ::: {.row}
 Crested Grebe
@@ -102,7 +118,7 @@ Tufted Duck
 :::
 
 
-## Kingfisher
+## The occasional sighting of a Kingfisher
 
 ![Kingfisher](_raw_images/birds/kingfisher.jpg)
 
@@ -118,11 +134,11 @@ is an olympic sport
 
 ## posit logo
 
-{{< motion-canvas ./animations/posit-logo.js loop=false >}}
+{{< motion-canvas ./animations/posit-logo.js loop=false fullscreen=true >}}
 
 ## hexagons
 
-{{< motion-canvas ./animations/hexagons.js loop=false >}}
+{{< motion-canvas ./animations/hexagons.js loop=false fullscreen=true >}}
 
 ## motion canvas
 

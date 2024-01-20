@@ -18,7 +18,7 @@
 </style><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>Posit goes paddling</title>
+  <title>paddling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -328,23 +328,23 @@
       margin-right: 0; 
     }
   </style>
+  <script src="./dist/motion-canvas-ts.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Posit goes paddling</h1>
 
-<div class="quarto-title-authors">
-</div>
-
+<section id="posit-goes-paddling" class="slide level2">
+<h2>Posit goes paddling</h2>
+<p><motion-canvas-player src="./animations/posit_footer.js" auto="true" loop="true" style="position:absolute; bottom:0; width:100%; left:0;"></motion-canvas-player></p>
 </section>
 <section id="lisa-carrington" class="slide level2">
 <h2>Lisa Carrington</h2>
-<script type="module" crossorigin="" src="./dist/motion-canvas-ts.js"></script>
-<p>Olympic champion</p>
-<p><motion-canvas-player src="./animations/project2.js" auto="true" loop="false"></motion-canvas-player></p>
+<p>Olympic champion, 200m sprint kayak</p>
+<div class="row">
+<p><img data-src="_raw_images/lisa/lisa-3.jpg" alt="Lisa Carrington"> <img data-src="_raw_images/lisa/lisa-2.jpg" alt="Lisa Carrington"> <img data-src="_raw_images/lisa/lisa-1.jpg" alt="Lisa Carrington"></p>
+</div>
 <p>Unbeaten since 2012</p>
 </section>
 <section id="south-african-rivers" class="slide level2">
@@ -376,8 +376,8 @@
 <p><img data-src="./_raw_images/zambezi/zambezi-1.jpg"> <img data-src="./_raw_images/zambezi/zambezi-2.jpg"> <img data-src="./_raw_images/zambezi/zambezi-3.jpg"></p>
 </div>
 </section>
-<section id="birds" class="slide level2">
-<h2>Birds</h2>
+<section id="birdlife-of-the-river-thames" class="slide level2">
+<h2>Birdlife of the River Thames</h2>
 <div class="row">
 <p>Crested Grebe</p>
 <p>Swan</p>
@@ -387,8 +387,8 @@
 <p><img data-src="_raw_images/birds/crested-grebe.jpg" alt="Crested Grebe"> <img data-src="_raw_images/birds/swan.jpg"> <img data-src="_raw_images/birds/tufted-duck.jpg"></p>
 </div>
 </section>
-<section id="kingfisher" class="slide level2">
-<h2>Kingfisher</h2>
+<section id="the-occasional-sighting-of-a-kingfisher" class="slide level2">
+<h2>The occasional sighting of a Kingfisher</h2>
 
 <img data-src="_raw_images/birds/kingfisher.jpg" class="r-stretch quarto-figure-center"><p class="caption">Kingfisher</p></section>
 <section id="racing-kayaking" class="slide level2">
@@ -398,11 +398,11 @@
 </section>
 <section id="posit-logo" class="slide level2">
 <h2>posit logo</h2>
-<p><motion-canvas-player src="./animations/posit-logo.js" auto="true" loop="false"></motion-canvas-player></p>
+<p><motion-canvas-player src="./animations/posit-logo.js" auto="true" loop="false" style="position:absolute; bottom:0; width:100%; left:0;"></motion-canvas-player></p>
 </section>
 <section id="hexagons" class="slide level2">
 <h2>hexagons</h2>
-<p><motion-canvas-player src="./animations/hexagons.js" auto="true" loop="false"></motion-canvas-player></p>
+<p><motion-canvas-player src="./animations/hexagons.js" auto="true" loop="false" style="position:absolute; bottom:0; width:100%; left:0;"></motion-canvas-player></p>
 </section>
 <section id="motion-canvas" class="slide level2">
 <h2>motion canvas</h2>
@@ -444,7 +444,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
-'appearance': {"hideagain":true,"delay":300,"debug":false,"appearevent":"slidechanged","autoappear":true,"autoelements":{"img":{"animation":"animate__fadeInDown","speed":"slow","delay":"200"}},"appearparents":false},
+'appearance': {"hideagain":true,"delay":300,"debug":false,"appearevent":"slidechanged","autoappear":true,"autoelements":{"img":{"animation":"animate__fadeInDown","speed":"slow","delay":"500"}},"appearparents":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -570,14 +570,14 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+        transitionSpeed: 'slow',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
