@@ -2,12 +2,21 @@
 title: "Posit goes paddling"
 format: 
   revealjs:
+    width: 1920
+    height: 1080
     css: custom.css
     mainfont: Open_Sans
     resources:
     - dist/*/*
     - _fonts/*/*
     theme: night
+    menu: false
+    appearance:
+      autoappear: true
+      autoelements: {"img": {"animation":"animate__fadeInDown", "speed":"slow", "delay":"200"}}
+      appearevent: slidechanged
+revealjs-plugins:
+  - appearance
 preview:
   port: 4200
   browser: false
@@ -24,6 +33,80 @@ Olympic champion
 {{< motion-canvas ./animations/project2.js auto loop=false >}}
 
 Unbeaten since 2012
+
+
+
+
+## South African rivers
+
+Orange, Breede, Vaal
+
+::: {.row}
+![Orange](./_raw_images/sa-rivers/orange-descent.jpg)
+![Breede](./_raw_images/sa-rivers/breede.jpg)
+![Vaal](./_raw_images/sa-rivers/vaal-1.jpg)
+:::
+
+
+
+## South African rivers
+
+The Berg river marathon
+
+::: {.row}
+![](./_raw_images/sa-rivers/berg-1.jpg)
+![](./_raw_images/sa-rivers/berg-5.jpg)
+![](./_raw_images/sa-rivers/berg-4.jpg)
+:::
+
+240km over 4 days, in the middle of winter
+
+
+    
+## South African rivers 
+The Duzi river marathon
+
+::: {.row}
+![](./_raw_images/sa-rivers/duzi-1.jpg)
+![](./_raw_images/sa-rivers/duzi-5.jpg)
+![](./_raw_images/sa-rivers/duzi-7.jpg)
+:::
+
+120km over three days, with grade 3+ rapids
+
+
+
+## Zambezi river rafting 
+
+::: {.row}
+![](./_raw_images/zambezi/zambezi-1.jpg)
+![](./_raw_images/zambezi/zambezi-2.jpg)
+![](./_raw_images/zambezi/zambezi-3.jpg)
+:::
+
+
+## Birds
+
+::: {.row}
+Crested Grebe
+
+Swan
+
+Tufted Duck
+:::
+
+::: {.row}
+![Crested Grebe](_raw_images/birds/crested-grebe.jpg)
+![](_raw_images/birds/swan.jpg)
+![](_raw_images/birds/tufted-duck.jpg)
+:::
+
+
+## Kingfisher
+
+![Kingfisher](_raw_images/birds/kingfisher.jpg)
+
+
 
 ## Racing kayaking
 
