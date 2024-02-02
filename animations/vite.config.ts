@@ -13,6 +13,8 @@ export default defineConfig({
         "./src/posit-logo.ts",
         "./src/kayak.ts",
         "./src/quarto_mc.ts",
+        "./src/pipeline.ts",
+
       ],
     }),
   ],
