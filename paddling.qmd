@@ -14,20 +14,23 @@ format:
     - _fonts/*/*
     theme: night
     menu: false
+    include-in-header: 
+      - text: <script src="./dist/motion-canvas-ts.js"></script>
     appearance:
       autoappear: true
       autoelements: {"img": {"animation":"animate__fadeInDown", "speed":"slow", "delay":"500"}}
       appearevent: slidechanged
-    include-in-header: 
-      - text: <script src="./dist/motion-canvas-ts.js"></script>
+    ElapsedTimeBar:
+      allottedTime: 10000
+      barColor: "#00f"
 project:
   preview:
     port: 4200
     browser: false
 revealjs-plugins:
   - appearance
+  - ElapsedTimeBar
 ---
-
 
 
 
@@ -51,11 +54,16 @@ Olympic champion, 200m sprint kayak
 Unbeaten since 2012
 
 
+## Racing kayak
+
+![Racing kayak](_raw_images/inkscape/k1.svg)
+
+
 
 
 ## South African rivers
 
-Orange, Breede, Vaal
+Orange, Breede and Vaal rivers
 
 ::: {.row}
 ![Orange](./_raw_images/sa-rivers/orange-descent.jpg)
@@ -63,6 +71,7 @@ Orange, Breede, Vaal
 ![Vaal](./_raw_images/sa-rivers/vaal-1.jpg)
 :::
 
+Two-day marathons
 
 
 ## South African rivers
@@ -92,7 +101,7 @@ The Duzi river marathon
 
 
 
-## Zambezi river rafting 
+## Zambezi river rafting..
 
 ::: {.row}
 ![](./_raw_images/zambezi/zambezi-1.jpg)
@@ -113,23 +122,22 @@ Tufted Duck
 
 ::: {.row}
 ![Crested Grebe](_raw_images/birds/crested-grebe.jpg)
-![](_raw_images/birds/swan.jpg)
-![](_raw_images/birds/tufted-duck.jpg)
+![Swan](_raw_images/birds/swan.jpg)
+![Tufted Duck](_raw_images/birds/tufted-duck.jpg)
 :::
 
 
 ## The occasional sighting of a Kingfisher
 
+::: {.row .center}
 ![Kingfisher](_raw_images/birds/kingfisher.jpg)
+:::
 
 
-
-## Racing kayaking
-
-is an olympic sport
+## Kayak hex logo
 
 
-{{< motion-canvas ./animations/kayak.js >}}
+{{< motion-canvas ./animations/kayak.js width="50%" >}}
 
 
 ## posit logo
@@ -142,4 +150,4 @@ is an olympic sport
 
 ## motion canvas
 
-{{< motion-canvas ./animations/quarto_mc.js loop >}}
+{{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}}
