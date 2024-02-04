@@ -1,0 +1,91 @@
+/*-- scss:defaults --*/
+
+$presentation-h1-font-size:	2.5em;
+$presentation-h2-font-size:	2.5em;
+$presentation-h3-font-size:	1.3em;
+$presentation-h4-font-size:	1em;
+
+/*-- scss:rules --*/
+
+@font-face {
+  font-family: "Open_Sans";
+  src: 
+    local(),  
+    url("./_fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format(truetype);
+  }
+
+.row1, .row2, .row3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  grid-gap: 30px;
+}
+
+.row1 > p, .row > ul, .row > .col,
+.row2 > p, .row > ul, .row > .col,
+.row3 > p, .row > ul, .row > .col{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+	display: grid;
+	width: 100%;
+	grid-gap: 1em;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.row1 > p, .row > ul, .row > .col {
+  grid-template-columns: 1fr;
+}
+
+.row2 > p, .row > ul, .row > .col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row3 > p, .row > ul, .row > .col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.row1 > .col, 
+.row2 > .col, 
+.row3 > .col {
+  display: flex;
+}
+
+
+.larger {
+  font-size: 1.25em;
+}
+
+.hide-title > h2 {
+  display: none;
+}
+
+
+
+
+.reveal img {
+  margin: 0.5em;
+  border-radius: 5%;
+}
+
+
+.reveal img.demoimg {
+  /* margin: 1em; */
+  border-radius: 5%;
+}
+
+.hidetitle > h1, .hidetitle > h2 {
+  display: none;
+}
+
+.center-xy {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  // -ms-transform: translateY(-50%), translateX(-50%);
+  // transform: translateY(-50%), translateX(-50%);
+  margin: auto auto;
+}
