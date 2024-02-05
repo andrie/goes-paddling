@@ -4,9 +4,6 @@ format:
   revealjs:
     width: 1920
     height: 1080
-    # css: 
-    # - custom.css
-    # - extent.css
     mainfont: Open_Sans
     transition: fade
     transition-speed: slow
@@ -46,7 +43,7 @@ revealjs-plugins:
 {{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
 
 
-## {data-background-video="./_raw_images/lisa-carrington.mp4"}
+## Lisa Carrington {data-background-video="./_raw_images/lisa-carrington-no-audio.mp4"}
 
 
 
@@ -148,7 +145,7 @@ Tufted Duck
 
 {{< motion-canvas ./animations/kayak.js width="50%" >}}
 
-## Elements of risk when paddling
+## Elements of risk
 
 :::: {.columns}
 
@@ -182,9 +179,9 @@ Weather
 
 ::: {.center-xy .larger style="font-size: 2em; top=25%;"}
 <center>
-This information is in multiple places.
+The information is scattered.
 
-Finding it requires opening multiple websites.
+This requires opening multiple websites.
 </center>
 :::
 
@@ -196,7 +193,9 @@ Finding it requires opening multiple websites.
 {{< motion-canvas ./animations/posit-logo.js loop=false fullscreen=true >}}
 
 
-## Jobs to be done
+## Jobs to be done 
+
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
 
 ::: {.larger}
 - Discover the data
@@ -215,50 +214,100 @@ Finding it requires opening multiple websites.
 https://www.gov.uk/guidance/river-thames-current-river-conditions
 
 
-## Develop the app
+## Develop the app 
 
-- Use python with `quarto`
-- To scrape a site
-  - `beautifulsoup4`
-  - `pandas`
-- To retrieve data from an API
-  - `requests`
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns}
+::: {.column width="60%"}
+Use python with `quarto`
+
+<br/>
+
+Scraping data from a website
+
+- `beautifulsoup4`
+- `pandas`
+
+<br/>
+
+Retrieving data from an API
+
+- `requests`
+- Or find a package on PyPi (`ea_rivers`)
+
+:::
+::::
+
+## Deploy 
+
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns .larger}
+::: {.column width="60%"}
+Push to quarto pub
+
+```{.bash .larger}
+quarto render
+quarto publish
+```
+:::
+::::
+
+<br/>
+
+## Automate
+
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns .larger}
+::: {.column width="60%"}
+Push to version control
+
+```{.bash .larger}
+git commit
+git push
+```
+<br/>
+
+Use github action to re-render once per day
+
+```bash
+quarto publish paddling-report.qmd
+```
+
+<br/>
+
+Convince the club to embed using an `iframe` element
+:::
+::::
 
 
-## Deploy
-
-- Push to version control
-
-   ```bash
-   git commit
-   git push
-   ```
-
-- Use github action to re-render once per day
-
-  ```bash
-  quarto publish paddling-report.qmd
-  ```
-
-- Convince the club to embed using an `iframe` element
 
 ## All the safety data in one place
 
 ![Hampton Canoe Club website](_raw_images/report/hcc-site.png)
 
 
-## {background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/" zoom=0.5}
+## HCC site{.hidetitle background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/"  zoom=0.5}
 
 <!-- ## hexagons
 
-{{< motion-canvas ./animations/hexagons.js loop=false fullscreen=true >}}
+{{< motion-canvas ./animations/hexagons.js loop=false fullscreen=true >}} -->
 
-## motion canvas
-
-{{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}} -->
 
 ## Your work keeps me safe
 
-![Dragonboat racing](_raw_images/dragonboat.jpg)
+![All in the same boat](_raw_images/dragonboat.jpg)
 
-All in the same boat.
+
+
+## Making these slides
+
+{{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}}
+
+
+## Outro {.hidetitle}
+
+{{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
+

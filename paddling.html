@@ -410,10 +410,10 @@
 <h2>Posit goes paddling</h2>
 <p><motion-canvas-player src="./animations/posit_footer.js" auto="true" loop="true" style="position:absolute; bottom:0; width:100%;"></motion-canvas-player></p>
 </section>
-<section id="section" class="slide level2" data-background-video="./_raw_images/lisa-carrington.mp4">
-<h2></h2>
+<section id="lisa-carrington" class="slide level2" data-background-video="./_raw_images/lisa-carrington-no-audio.mp4">
+<h2>Lisa Carrington</h2>
 </section>
-<section id="lisa-carrington" class="slide level2">
+<section id="lisa-carrington-1" class="slide level2">
 <h2>Lisa Carrington</h2>
 <p>Olympic champion, 200m sprint kayak</p>
 <div class="row3">
@@ -474,8 +474,8 @@
 <h2>Safety</h2>
 <p><motion-canvas-player src="./animations/kayak.js" auto="true" loop="true" width:50%;=""></motion-canvas-player></p>
 </section>
-<section id="elements-of-risk-when-paddling" class="slide level2">
-<h2>Elements of risk when paddling</h2>
+<section id="elements-of-risk" class="slide level2">
+<h2>Elements of risk</h2>
 <div class="columns">
 <div class="column larger" style="width:50%;">
 <p>General</p>
@@ -500,8 +500,8 @@
 <h2>The problem</h2>
 <div class="center-xy larger" style="font-size: 2em; top=25%;">
 <center>
-<p>This information is in multiple places.</p>
-Finding it requires opening multiple websites.
+<p>The information is scattered.</p>
+This requires opening multiple websites.
 </center>
 </div>
 </section>
@@ -511,6 +511,7 @@ Finding it requires opening multiple websites.
 </section>
 <section id="jobs-to-be-done" class="slide level2">
 <h2>Jobs to be done</h2>
+<p><img data-src="./_raw_images/inkscape/jtbd.svg" class="absolute" style="top: 0px; left: 0px; width: 1920px; "></p>
 <div class="larger">
 <ul>
 <li>Discover the data</li>
@@ -528,54 +529,74 @@ Finding it requires opening multiple websites.
 </section>
 <section id="develop-the-app" class="slide level2">
 <h2>Develop the app</h2>
-<ul>
-<li>Use python with <code>quarto</code></li>
-<li>To scrape a site
+<p><img data-src="./_raw_images/inkscape/jtbd.svg" class="absolute" style="top: 0px; left: 0px; width: 1920px; "></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Use python with <code>quarto</code></p>
+<p><br></p>
+<p>Scraping data from a website</p>
 <ul>
 <li><code>beautifulsoup4</code></li>
 <li><code>pandas</code></li>
-</ul></li>
-<li>To retrieve data from an API
+</ul>
+<p><br></p>
+<p>Retrieving data from an API</p>
 <ul>
 <li><code>requests</code></li>
-</ul></li>
+<li>Or find a package on PyPi (<code>ea_rivers</code>)</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="deploy" class="slide level2">
 <h2>Deploy</h2>
-<ul>
-<li><p>Push to version control</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> commit</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Use github action to re-render once per day</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> publish paddling-report.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Convince the club to embed using an <code>iframe</code> element</p></li>
-</ul>
+<p><img data-src="./_raw_images/inkscape/jtbd.svg" class="absolute" style="top: 0px; left: 0px; width: 1920px; "></p>
+<div class="columns larger">
+<div class="column" style="width:60%;">
+<p>Push to quarto pub</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash larger number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">quarto</span> publish</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="automate" class="slide level2">
+<h2>Automate</h2>
+<p><img data-src="./_raw_images/inkscape/jtbd.svg" class="absolute" style="top: 0px; left: 0px; width: 1920px; "></p>
+<div class="columns larger">
+<div class="column" style="width:60%;">
+<p>Push to version control</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash larger number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> commit</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>Use github action to re-render once per day</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">quarto</span> publish paddling-report.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>Convince the club to embed using an <code>iframe</code> element</p>
+</div>
+</div>
 </section>
 <section id="all-the-safety-data-in-one-place" class="slide level2">
 <h2>All the safety data in one place</h2>
 
 <img data-src="_raw_images/report/hcc-site.png" class="r-stretch quarto-figure-center"><p class="caption">Hampton Canoe Club website</p></section>
-<section id="section-1" class="slide level2" data-background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/" data-zoom="0.5">
-<h2></h2>
+<section id="hcc-site" class="slide level2 hidetitle" data-background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/" data-zoom="0.5">
+<h2>HCC site</h2>
 <!-- ## hexagons
-
-
-
-
-
-
-
-
-
-## motion canvas
 
  -->
 </section>
 <section id="your-work-keeps-me-safe" class="slide level2">
 <h2>Your work keeps me safe</h2>
 
-<img data-src="_raw_images/dragonboat.jpg" class="r-stretch quarto-figure-center"><p class="caption">Dragonboat racing</p><p>All in the same boat.</p>
+<img data-src="_raw_images/dragonboat.jpg" class="r-stretch quarto-figure-center"><p class="caption">All in the same boat</p></section>
+<section id="making-these-slides" class="slide level2">
+<h2>Making these slides</h2>
+<p><motion-canvas-player src="./animations/quarto_mc.js" auto="true" loop="true" width:100%;;=""></motion-canvas-player></p>
+</section>
+<section id="outro" class="slide level2 hidetitle">
+<h2>Outro</h2>
+<p><motion-canvas-player src="./animations/posit_footer.js" auto="true" loop="true" style="position:absolute; bottom:0; width:100%;"></motion-canvas-player></p>
 <div class="footer footer-default">
 
 </div>
