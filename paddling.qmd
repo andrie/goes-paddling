@@ -1,5 +1,5 @@
 ---
-title: "Posit goes paddling"
+# title: "Posit goes paddling"
 format: 
   revealjs:
     width: 1920
@@ -47,7 +47,8 @@ revealjs-plugins:
 
 
 
-## Lisa Carrington
+
+<!-- ## Lisa Carrington
 
 
 Olympic champion, 200m sprint kayak
@@ -56,7 +57,7 @@ Olympic champion, 200m sprint kayak
 ![Lisa Carrington](_raw_images/lisa/lisa-3.jpg)
 ![Lisa Carrington](_raw_images/lisa/lisa-2.jpg)
 ![Lisa Carrington](_raw_images/lisa/lisa-1.jpg)
-:::
+::: -->
 
 
 Unbeaten since 2012
@@ -64,7 +65,7 @@ Unbeaten since 2012
 
 ## Racing kayak
 
-![Racing kayak](_raw_images/inkscape/k1.svg)
+![](_raw_images/inkscape/k1.svg)
 
 
 
@@ -86,32 +87,38 @@ Unbeaten since 2012
 
 
     
-## The Duzi river marathon
+<!-- ## ..on rivers with rapids
 
-::: {.row3}
+::: {.row2}
 ![](./_raw_images/sa-rivers/duzi-1.jpg)
 ![](./_raw_images/sa-rivers/duzi-5.jpg)
 ![](./_raw_images/sa-rivers/duzi-7.jpg)
-:::
+::: -->
 
-120km over three days, with grade 3+ rapids
 
 
 
 ## Hampton Canoe Club
 
-![Hampton Canoe Club at Bell Hill](./_raw_images/hcc/bell-hill.jpg)
+![Bell Hill](./_raw_images/hcc/bell-hill.jpg)
 
 
 
 ## A much more sedate affair
 
-
-
-::: {.row3}
+::: {.row1}
 ![](./_raw_images/hcc/jana.jpg)
+<!-- ![](./_raw_images/hcc/capsize-1.jpg) -->
+<!-- ![](./_raw_images/hcc/canoe.jpg) -->
+:::
+
+
+## Emphasis on safety and training
+
+::: {.row1}
+<!-- ![](./_raw_images/hcc/jana.jpg) -->
 ![](./_raw_images/hcc/capsize-1.jpg)
-![](./_raw_images/hcc/canoe.jpg)
+<!-- ![](./_raw_images/hcc/canoe.jpg) -->
 :::
 
 ## Sunrise on the Thames
@@ -177,32 +184,39 @@ Weather
 ## The problem
 
 
-::: {.center-xy .larger style="font-size: 2em; top=25%;"}
+::: {.absolute top=300 left=200 style="font-size: 2em;"}
 <center>
 The information is scattered.
 
-This requires opening multiple websites.
+Multiple websites.
+
+<br/>
+I want it in one place.
 </center>
 :::
 
 
 
 
-## The solution: use Posit tools
+## The solution
 
-{{< motion-canvas ./animations/posit-logo.js loop=false fullscreen=true >}}
+{{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
+<!-- {{< motion-canvas ./animations/posit-logo.js loop=false fullscreen=true >}} -->
 
+::: {.absolute top=400 left=500 style="font-size: 2em;"}
+<center>
+Use Posit tools
+<br/></center>
+:::
 
 ## Jobs to be done 
 
 ![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
 
-::: {.larger}
-- Discover the data
-- Develop a report
-- Deploy
 
-:::
+## Discover the data
+
+![](./_raw_images/inkscape/jtbd-d.svg){.absolute left=0 top=0 width=1920}
 
 ## Discover the data
 
@@ -216,7 +230,7 @@ https://www.gov.uk/guidance/river-thames-current-river-conditions
 
 ## Develop the app 
 
-![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+![](./_raw_images/inkscape/jtbd-dd.svg){.absolute left=0 top=0 width=1920}
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -241,10 +255,11 @@ Retrieving data from an API
 
 ## Deploy 
 
-![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+![](./_raw_images/inkscape/jtbd-ddd.svg){.absolute left=0 top=0 width=1920}
 
 :::: {.columns .larger}
 ::: {.column width="60%"}
+<br/>
 Push to quarto pub
 
 ```{.bash .larger}
@@ -289,7 +304,7 @@ Convince the club to embed using an `iframe` element
 ![Hampton Canoe Club website](_raw_images/report/hcc-site.png)
 
 
-## HCC site{.hidetitle background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/"  zoom=0.5}
+## HCC site {.hidetitle background-iframe="https://hamptoncanoeclub.co.uk/local-river-conditions/"  zoom=0.5}
 
 <!-- ## hexagons
 
@@ -302,12 +317,15 @@ Convince the club to embed using an `iframe` element
 
 
 
-## Making these slides
+<!-- ## Making these slides {.hidden} -->
+<!-- {{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}} -->
 
-{{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}}
 
 
-## Outro {.hidetitle}
+## Posit goes paddling
+
+
+![](_raw_images/inkscape/k1.svg)
 
 {{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
 

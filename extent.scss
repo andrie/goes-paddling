@@ -4,11 +4,16 @@
 
 /*-- scss:rules --*/
 
-.reveal .slides {
-  background-color: $body-bg;
-}
+// .reveal .slides {
+//   background-color: $body-bg;
+// }
 
 body.reveal-viewport {
   background: lighten($body-bg, 25%);
   // background: wheat;
+}
+
+
+.reveal .slides:not([data-background-video]) {
+  background: $body-bg;
 }
