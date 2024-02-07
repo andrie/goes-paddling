@@ -9,11 +9,11 @@
 // }
 
 body.reveal-viewport {
-  background: lighten($body-bg, 25%);
-  // background: wheat;
+  // background: lighten($body-bg, 50%);
+  background: wheat;
 }
 
 
-.reveal .slides:not([data-background-video]) {
+.reveal .slide:not([data-background-video]) {
   background: $body-bg;
 }

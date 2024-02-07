@@ -105,21 +105,22 @@ Unbeaten since 2012
 
 
 ## A much more sedate affair
-
-::: {.row1}
 ![](./_raw_images/hcc/jana.jpg)
+
+<!-- ::: {.row1} -->
 <!-- ![](./_raw_images/hcc/capsize-1.jpg) -->
 <!-- ![](./_raw_images/hcc/canoe.jpg) -->
-:::
+<!-- ::: -->
 
 
 ## Emphasis on safety and training
 
-::: {.row1}
-<!-- ![](./_raw_images/hcc/jana.jpg) -->
 ![](./_raw_images/hcc/capsize-1.jpg)
+
+<!-- ::: {.row1} -->
+<!-- ![](./_raw_images/hcc/jana.jpg) -->
 <!-- ![](./_raw_images/hcc/canoe.jpg) -->
-:::
+<!-- ::: -->
 
 ## Sunrise on the Thames
 
