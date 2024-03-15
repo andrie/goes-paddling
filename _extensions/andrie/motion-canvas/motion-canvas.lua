@@ -1,10 +1,6 @@
 mc_style = [[
 <style>
-    motion-canvas-player {
-        width:  75%;
-        /* height: 25vh; */
-        /* display: inline-block; */
-    }
+    motion-canvas-player { width:  75%; }
 </style>
 ]]
 
@@ -37,9 +33,7 @@ return {
     local parse_kwarg = function(key, default, css)
       css = css or false -- default to false
       local value = getKwarg(key)
-      if value == "" then
-        value = default
-      end
+      if value == "" then value = default end
       if css then 
         return key .. ':' .. value .. '; '
       else 
@@ -50,36 +44,37 @@ return {
 
     local fullscreen
     if getKwarg("fullscreen") == "true" then
-      fullscreen = 'style="position:absolute; bottom:0; width:100%;"'
-      -- fullscreen = 'position:absolute; bottom:0; '
+      fullscreen = 'style="position:absolute; top:0; width:100%;"'
     else
-      -- fullscreen = 'style="width:75%; " '
       fullscreen = ''
     end
 
     local width = getKwarg("width")
     if fullscreen ~= "" then
-      width = "width:100%; "
       width = ""
     else
       width = "width:" .. width .. "; "
     end
 
+    local auto = getKwarg("auto")
+    if auto == "true" then
+      auto = 'auto=true '
+    else
+      auto = ''
+    end
+
     local cmdArgs = ""
     cmdArgs = cmdArgs .. 
-      parse_kwarg("auto", "true") ..
-      -- 'auto=true ' ..
+      auto ..
       parse_kwarg("loop", "true") ..
-      --  parse_kwarg("width", "75%", true) ..
       fullscreen ..
       width ..
-      -- "width:75%; " ..
       ''
 
       
       local out = 
       '<motion-canvas-player src="' .. src .. '" ' .. cmdArgs ..'></motion-canvas-player>'
-      quarto.log.output(out)
+      -- quarto.log.output(out)
 
     return pandoc.RawInline('html', out)
   end

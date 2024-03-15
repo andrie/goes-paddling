@@ -1,0 +1,181 @@
+---
+title: "Posit at UKHSA"
+
+format: 
+  revealjs:
+    width: 1920
+    height: 1080
+    mainfont: Open_Sans
+    transition: fade
+    transition-speed: slow
+    background-transition: fade
+    resources:
+    - dist/*/*
+    - _fonts/*/*
+    template-partials:
+    - title-slide.html
+    theme: 
+    - night
+    - custom.scss
+    # - extent.scss
+    menu: false
+    include-in-header: 
+      - text: <script src="./dist/motion-canvas-ts.js"></script>
+    gongtimer:
+      allottedTime: 5
+      barColor: "#00f"
+
+project:
+  preview:
+    port: 4200
+    .row3ser: false
+revealjs-plugins:
+  - gongtimer
+---
+
+
+
+## Posit at UKHSA 2
+{{< motion-canvas ./animations/posit_footer.js  fullscreen=true >}}
+
+
+
+## mc
+
+{{< motion-canvas ./animations/quarto_mc.js loop width=100%; >}}
+
+## posit logo
+
+{{< motion-canvas ./animations/posit-logo.js loop=false fullscreen=true >}}
+
+## 123 loop=false
+
+{{< motion-canvas ./animations/one23.js loop=false >}}
+
+## The problem
+
+
+::: {.absolute top=300 left=200 style="font-size: 2em;"}
+<center>
+The information is scattered.
+
+Multiple websites.
+
+<br/>
+I want it in one place.
+</center>
+:::
+
+
+
+
+## The solution
+
+{{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
+
+::: {.absolute top=400 left=500 style="font-size: 2em;"}
+<center>
+Use Posit tools
+<br/></center>
+:::
+
+## Jobs to be done 
+
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+
+
+## Discover the data
+
+![](./_raw_images/inkscape/jtbd-d.svg){.absolute left=0 top=0 width=1920}
+
+## Discover the data
+
+::: {.row2}
+![River conditions](_raw_images/data-source/river-conditions-long.png)
+![River restrictions](_raw_images/data-source/restrictions-long.png)
+:::
+
+https://www.gov.uk/guidance/river-thames-current-river-conditions
+
+
+## Develop the app 
+
+![](./_raw_images/inkscape/jtbd-dd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns}
+::: {.column width="60%"}
+Use python with `quarto`
+
+<br/>
+
+Scraping data from a website
+
+- `beautifulsoup4`
+- `pandas`
+
+<br/>
+
+Retrieving data from an API
+
+- `requests`
+- Or find a package on PyPi (`ea_rivers`)
+
+:::
+::::
+
+## Deploy 
+
+![](./_raw_images/inkscape/jtbd-ddd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns .larger}
+::: {.column width="60%"}
+<br/>
+Push to quarto pub
+
+```{.bash .larger}
+quarto render
+quarto publish
+```
+:::
+::::
+
+<br/>
+
+## Automate
+
+![](./_raw_images/inkscape/jtbd.svg){.absolute left=0 top=0 width=1920}
+
+:::: {.columns .larger}
+::: {.column width="60%"}
+Push to version control
+
+```{.bash .larger}
+git commit
+git push
+```
+<br/>
+
+Use github action to re-render once per day
+
+```bash
+quarto publish paddling-report.qmd
+```
+
+<br/>
+
+Convince the club to embed using an `iframe` element
+:::
+::::
+
+
+
+
+
+
+
+## Conclusion
+
+
+
+{{< motion-canvas ./animations/posit_footer.js auto fullscreen=true >}}
+

@@ -9,7 +9,7 @@ This is a `reveal.js` presentation, rendered using `quarto` and `motion-canvas`,
 
 ## Live preview
 
-This project contains a quarto website, defined in `quarto.qmd`.
+This project contains a quarto website, defined in `paddling.qmd`.
 
 You can preview the rendered version of this site at <https://andrie.quarto.pub/goes-paddling/>
 
@@ -25,7 +25,7 @@ The folder structure of this project is as follows:
 ├── _quarto.yml
 ├── paddling.qmd
 ├── src
-│   ├── motion-canvas-url.js # fixes the url once deployed
+│   ├── motion-canvas-ts.html # includes the MC dependencies
 |
 | # Creating the animations
 ├── animations

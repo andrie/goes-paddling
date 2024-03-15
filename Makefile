@@ -16,8 +16,8 @@ serve:
 	npm --prefix ./animations run serve
 
 quarto:
-	quarto render paddling.qmd
+	quarto render pres.qmd
 
 publish:
-	quarto render paddling.qmd
-	quarto publish paddling.qmd --no-prompt
+	quarto render pres.qmd
+	quarto publish pres.qmd --no-prompt

@@ -7,13 +7,13 @@ export default defineConfig({
     motionCanvas({
       project: [
         "./src/project.ts", 
-        "./src/project2.ts",
         "./src/hexagons.ts",
         "./src/posit_footer.ts",
         "./src/posit-logo.ts",
-        "./src/kayak.ts",
         "./src/quarto_mc.ts",
         "./src/pipeline.ts",
+        "./src/one23.ts",
+        "./src/standalone.tsx"
 
       ],
     }),
